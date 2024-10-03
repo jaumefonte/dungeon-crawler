@@ -167,6 +167,7 @@ MonoBehaviour:
   enemyBattlerPrefab: {fileID: 70178933776279134, guid: 29e6ebbf4cd9ead4aab10d3a185b6011, type: 3}
   partyBattlerPrefab: {fileID: 5276726906927878936, guid: 352ac298cbea8954aa94bc0a594b0488, type: 3}
   battleMessage: {fileID: 714615027}
+  actionDelay: 2
 --- !u!4 &168598843
 Transform:
   m_ObjectHideFlags: 0
@@ -697,6 +698,10 @@ PrefabInstance:
       propertyPath: testFight
       value: 
       objectReference: {fileID: 11400000, guid: 317080dbe9aafd94ab9455afe33420bb, type: 2}
+    - target: {fileID: 6690430990923601267, guid: 6821ead6aebc2e740901fe16e69f5227, type: 3}
+      propertyPath: levelDanger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6690430990923601267, guid: 6821ead6aebc2e740901fe16e69f5227, type: 3}
       propertyPath: battleControl
       value: 
