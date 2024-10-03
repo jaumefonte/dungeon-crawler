@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {x: 20, y: 20}
   cellPrefab: {fileID: 11400000, guid: 8cc5710f710a24360a566370d7049cf8, type: 3}
-  generationStepDelay: 0.01
+  generationStepDelay: 0.001
   passagePrefab: {fileID: 11400000, guid: 4db582300649e4e399ee4a2665f9e8e6, type: 3}
   doorPrefab: {fileID: 1034814705867904878, guid: 47b0f67771fab04458c37f8ac7751571, type: 3}
   doorProbability: 0.1

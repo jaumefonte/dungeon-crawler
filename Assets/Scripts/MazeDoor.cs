@@ -38,6 +38,7 @@ public class MazeDoor : MazePassage
     }
     public override void OnPlayerEntered()
     {
+        ShowMapMarker();
         OtherSideOfDoor.hinge.localRotation = hinge.localRotation = isMirrored ? mirroredRotation : normalRotation;
         OtherSideOfDoor.cell.room.Show();
     }
