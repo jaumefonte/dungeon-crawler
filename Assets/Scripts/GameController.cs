@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
     public Maze mazePrefab;
 
     private Maze mazeInstance;
@@ -19,8 +20,21 @@ public class GameController : MonoBehaviour
     [Header("MAP")]
     [SerializeField] Camera mapCamera;
     [SerializeField] GameObject mapBackground;
+    public BattleController battleControl;
 
+    public bool inBattle;
+    public DataFight testFight;
+    public DataParty partyData;
+    public int dangerLevel;
+    [SerializeField] int levelDanger;
 
+    private void Awake()
+    {
+        if (instance == null)
+        { 
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -31,7 +45,9 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RestartGame();
+            
+            
+
         }
         if (Input.GetKeyUp(KeyCode.M)) 
         {
@@ -79,6 +95,18 @@ public class GameController : MonoBehaviour
             mapBackground.SetActive(false);
             mapCamera.rect = new Rect(0, 0, 0.25f, 0.5f);
             mapCamera.orthographicSize = 15f;
+        }
+    }
+    public void PlayerMoves()
+    {
+        dangerLevel += levelDanger;
+        if (Random.Range(0, 100) < dangerLevel)
+        {
+            if (!inBattle)
+            {
+                dangerLevel = 0;
+                battleControl.BeginBattle(testFight);
+            }
         }
     }
 }

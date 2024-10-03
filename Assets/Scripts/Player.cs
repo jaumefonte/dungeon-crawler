@@ -1,5 +1,4 @@
 using UnityEngine;
-using DG.Tweening;
 using System.Collections;
 
 public class Player : MonoBehaviour
@@ -9,7 +8,7 @@ public class Player : MonoBehaviour
     bool currentlyMoving;
     [SerializeField] private float translationSpeed;
     [SerializeField] private float rotationSpeed;
-
+    private MazeDirection currentDirection;
     public void SetLocation(MazeCell cell)
     {
         if (currentCell != null)
@@ -41,16 +40,11 @@ public class Player : MonoBehaviour
 
             SetLocation(edge.otherCell);
         }
-        
+        GameController.instance.PlayerMoves();
         currentlyMoving = false;
     }
-    private MazeDirection currentDirection;
 
-    //private void Look(MazeDirection direction)
-    //{
-    //    transform.localRotation = direction.ToRotation();
-    //    currentDirection = direction;
-    //}
+
     private IEnumerator Look(MazeDirection direction)
     {
         currentlyMoving = true;
@@ -65,7 +59,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (!currentlyMoving) 
+        if (!currentlyMoving && !GameController.instance.inBattle) 
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
