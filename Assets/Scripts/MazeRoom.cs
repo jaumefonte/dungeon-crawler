@@ -9,6 +9,7 @@ public class MazeRoom : ScriptableObject
     public MazeRoomSettings settings;
 
     private List<MazeCell> cells = new List<MazeCell>();
+    private bool alreadyShown;
 
     public void Add(MazeCell cell)
     {
@@ -24,10 +25,14 @@ public class MazeRoom : ScriptableObject
     }
     public void Hide()
     {
-        for (int i = 0; i < cells.Count; i++)
+        if (!alreadyShown) 
         {
-            cells[i].Hide();
+            for (int i = 0; i < cells.Count; i++)
+            {
+                cells[i].Hide();
+            }
         }
+        
     }
 
     public void Show()
@@ -36,5 +41,6 @@ public class MazeRoom : ScriptableObject
         {
             cells[i].Show();
         }
+        alreadyShown = true;
     }
 }

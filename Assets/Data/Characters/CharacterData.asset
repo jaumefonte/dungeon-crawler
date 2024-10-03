@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00c42e3cb4cb9442b6e0db180dd2856, type: 3}
+  m_Name: CharacterData
+  m_EditorClassIdentifier: 
+  characterName: Hroltar
+  characterImage: {fileID: 21300000, guid: c20f8e74992c7ee42af115296f0cd587, type: 3}
+  damage: 5
+  maxHP: 25

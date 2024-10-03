@@ -8,11 +8,12 @@ public class MazeCell : MonoBehaviour {
 
 	private int initializedEdgeCount;
     public MazeRoom room;
+    [SerializeField] private GameObject mapMarker;
 
     public void Initialize(MazeRoom room)
     {
         room.Add(this);
-        transform.GetChild(0).GetComponent<Renderer>().material = room.settings.floorMaterial;
+        //transform.GetChild(0).GetComponent<Renderer>().material = room.settings.floorMaterial;
     }
     public bool IsFullyInitialized {
 		get {
@@ -50,6 +51,7 @@ public class MazeCell : MonoBehaviour {
         {
             edges[i].OnPlayerEntered();
         }
+        mapMarker.SetActive(true);
     }
 
     public void OnPlayerExited()
