@@ -10,7 +10,7 @@ public class Battler : MonoBehaviour
     public Image characterImage;
     public Slider characterHP;
     public Image attackEffect;
-    public float frameRate = 0.5f;
+    public float frameRate = 0.3f;
 
     public void Initialize(DataCharacter data)
     {

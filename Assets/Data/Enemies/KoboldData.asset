@@ -15,4 +15,19 @@ MonoBehaviour:
   characterName: Kobold
   characterImage: {fileID: 21300000, guid: b9c3b800843d8c547b8720e9fe7847b0, type: 3}
   damage: 2
-  maxHP: 5
+  maxHP: 10
+  attackFrames:
+  - {fileID: -1924784016, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 1428898736, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 2109867279, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: -2126729440, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 429285934, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 2080477008, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 1990275884, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 388905721, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 1955354150, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: -719282335, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: -1875944186, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 1988068615, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: 852818238, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}
+  - {fileID: -212243151, guid: 1aec6cb6305fa2d48bfa178bb803f10a, type: 3}

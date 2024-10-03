@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Hroltar
   characterImage: {fileID: 21300000, guid: c20f8e74992c7ee42af115296f0cd587, type: 3}
-  damage: 5
+  damage: 3
   maxHP: 25
+  attackFrames:
+  - {fileID: 2032704527, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: 205532124, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: -577652076, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: -825197424, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: -300371235, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: 775066401, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: -535612598, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: 1460307182, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
+  - {fileID: -1854724331, guid: d595ffe8b2c83d046a96e976fe931952, type: 3}
