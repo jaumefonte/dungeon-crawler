@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     bool currentlyMoving;
     [SerializeField] private float translationSpeed;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private float mouseLookSpeed;
     private MazeDirection currentDirection;
+    private Vector3 currentlook = Vector3.zero;
     public void SetLocation(MazeCell cell)
     {
         if (currentCell != null)
@@ -54,14 +56,31 @@ public class Player : MonoBehaviour
             yield return null;
         }
         currentDirection = direction;
+        currentlook = transform.eulerAngles;
         currentlyMoving = false;
     }
-
+    private void MouseLook()
+    {        
+        currentlook.y += Input.GetAxis("Mouse X")* mouseLookSpeed;
+        transform.rotation = Quaternion.Euler(currentlook);
+    }
+    private void SetDirection()
+    {
+        StartCoroutine(Look(MazeDirections.FromEuler(currentlook)));
+    }
     private void Update()
     {
         if (!currentlyMoving && !GameController.instance.inBattle) 
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                MouseLook();
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                SetDirection();
+            }
+            else if (Input.GetKeyDown(KeyCode.W))
             {
                 StartCoroutine(Move(currentDirection));
             }

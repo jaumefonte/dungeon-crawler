@@ -41,6 +41,16 @@ public class GameController : MonoBehaviour
         StartCoroutine(BeginGame());
     }
 
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -99,14 +109,14 @@ public class GameController : MonoBehaviour
     }
     public void PlayerMoves()
     {
-        dangerLevel += levelDanger;
-        if (Random.Range(0, 100) < dangerLevel)
-        {
-            if (!inBattle)
-            {
-                dangerLevel = 0;
-                battleControl.BeginBattle(testFight);
-            }
-        }
+        //dangerLevel += levelDanger;
+        //if (Random.Range(0, 100) < dangerLevel)
+        //{
+        //    if (!inBattle)
+        //    {
+        //        dangerLevel = 0;
+        //        battleControl.BeginBattle(testFight);
+        //    }
+        //}
     }
 }

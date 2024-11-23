@@ -49,6 +49,29 @@ public static class MazeDirections {
 	public static Quaternion ToRotation (this MazeDirection direction) {
 		return rotations[(int)direction];
 	}
+    public static MazeDirection FromEuler(Vector3 eulerAngles)
+    {
+        // Normalize the angle to the range [0, 360]
+        float angle = eulerAngles.y % 360; 
+		if (angle < 0) { angle += 360; }  
+
+        if (angle >= 45f && angle < 135f)
+        {
+            return MazeDirection.East;
+        }
+        else if (angle >= 135f && angle < 225f)
+        {
+            return MazeDirection.South;
+        }
+        else if (angle >= 225f && angle < 315f)
+        {
+            return MazeDirection.West;
+        }
+        else
+        {
+            return MazeDirection.North;
+        }
+    }
     public static MazeDirection GetNextClockwise(this MazeDirection direction)
     {
         return (MazeDirection)(((int)direction + 1) % Count);

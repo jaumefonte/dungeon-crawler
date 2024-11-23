@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationSpeed: 6
   rotationSpeed: 360
+  mouseLookSpeed: 5
 --- !u!1 &8662921608374810499
 GameObject:
   m_ObjectHideFlags: 0
